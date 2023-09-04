@@ -1,0 +1,15 @@
+{
+  "name": "message-system",
+  "version": "1.0.0",
+  "description": "Simple Discord Bot for Wellcome, Leave & Boost Messages",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "d0dge",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1"
+  }
+}
