@@ -3,6 +3,20 @@ require('dotenv').config()
 
 config.bot = {
     token: process.env.TOKEN,
+    enabled: false,
+    activitys: [
+        {
+            name: "CODEDBOTZ",
+            type: "Watching", // Playing, Listening, Watching
+            status: "online" // online, idle, dnd, invisible
+        },
+        {
+            name: "CODEDBOTZ",
+            type: "Watching",
+            status: "afk"
+        }
+    ],
+    intervall: 10000, // 10 Seconds
 }
 
 config.messages = {
@@ -22,6 +36,18 @@ config.messages = {
             text: "CODEBOTZ", // Text of Footer
             iconURL: "https://media.discordapp.net/attachments/1061453021902544978/1140418112940945418/cdbz2.png", // Icon of Footer
         },
+        // fields: [
+        //     {
+        //         name: "Rules",
+        //         value: "Please read the rules in <#1140405329578971239> and react to the message to get access to the server.",
+        //         inline: true
+        //     },
+        //     {
+        //         name: "Roles",
+        //         value: "Get your roles in <#1140405332978601472>.",
+        //         inline: true
+        //     }
+        // ],
         timestamp: true, // If true the Embed will have a Timestamp
     },
     goodbye: {
@@ -40,10 +66,26 @@ config.messages = {
             text: "CODEBOTZ", // Text of Footer
             iconURL: "https://media.discordapp.net/attachments/1061453021902544978/1140418112940945418/cdbz2.png", // Icon of Footer
         },
+        // fields: [
+        //     {
+        //         name: "Rules",
+        //         value: "Please read the rules in <#1140405329578971239> and react to the message to get access to the server.",
+        //         inline: true
+        //     },
+        //     {
+        //         name: "Roles",
+        //         value: "Get your roles in <#1140405332978601472>.",
+        //         inline: true
+        //     }
+        // ],
         timestamp: true, // If true the Embed will have a Timestamp
     },
     boost: {
         channel: "1140405448260989068", // Channel ID
+        reaction: {
+            enabled: true, // If true the bot will react to the message
+            emoji: "💜", // Emoji of Reaction
+        },
         title: "Boost", // Title of Embed
         description: "Thank you {userping} for boosting our server!\n\nServer Boosts: {ammountboosts}", // Description of Embed
         color: "#2d1f54", // Color of Embed
@@ -58,6 +100,18 @@ config.messages = {
             text: "CODEBOTZ", // Text of Footer
             iconURL: "https://media.discordapp.net/attachments/1061453021902544978/1140418112940945418/cdbz2.png", // Icon of Footer
         },
+        // fields: [
+        //     {
+        //         name: "Rules",
+        //         value: "Please read the rules in <#1140405329578971239> and react to the message to get access to the server.",
+        //         inline: true
+        //     },
+        //     {
+        //         name: "Roles",
+        //         value: "Get your roles in <#1140405332978601472>.",
+        //         inline: true
+        //     }
+        // ],
         timestamp: true, // If true the Embed will have a Timestamp
     }
 }

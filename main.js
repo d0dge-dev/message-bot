@@ -61,6 +61,16 @@ const config = require('./config.js')
 
 client.on('ready', () => {
     console.log('Logged in as ' + client.user.tag + '!')
+    if (!config.bot.activitys) return
+    if (!config.bot.intervall) return
+    if (!config.bot.enabled) return
+    setInterval(() => {
+        let i = 0
+        const activity = config.bot.activitys[i]
+        client.user.setStatus(activity.status)
+        client.user.setActivity({ name: activity.name, type: activity.type })
+        i++
+    }, config.bot.intervall)
 })
 
 client.on('guildMemberAdd', async (member) => {
@@ -110,7 +120,9 @@ client.on('messageCreate', async (message) => {
 
     if (message.channel.id != config.messages.boost.channel) return
 
-    message.react('💜')
+    if (!config.messages.boost.reaction.enabled) return
+
+    message.react(config.messages.boost.reaction.emoji)
 })
 
 client.login(config.bot.token)
