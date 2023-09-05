@@ -1,12 +1,17 @@
 {
   "name": "message-system",
-  "version": "1.0.0",
-  "description": "Simple Discord Bot for Wellcome, Leave & Boost Messages",
+  "version": "1.5.0",
+  "description": "Simple Discord Bot for Welcome, Leave & Boost Messages",
   "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d0dge-dev/message-system/"
+  },
   "scripts": {
+    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "d0dge",
+  "author": "d0dge-dev",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^14.13.0",
