@@ -6,10 +6,7 @@ const client = new discord.Client({
         discord.GatewayIntentBits.GuildMembers,
         discord.GatewayIntentBits.GuildMessageReactions,
         discord.GatewayIntentBits.Guilds,
-        discord.GatewayIntentBits.GuildVoiceStates,
-        discord.GatewayIntentBits.GuildMessageTyping,
         discord.GatewayIntentBits.GuildPresences,
-        discord.GatewayIntentBits.GuildModeration,
     ]
 })
 
