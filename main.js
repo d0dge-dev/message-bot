@@ -81,6 +81,8 @@ client.on('guildMemberAdd', async (member) => {
     const embed = embedcreator('messages.welcome')
         .setDescription(config.messages.welcome.description
             .replace('{userping}', member.toString())
+            .replace('{username}', member.user.username)
+            .replace('{displayname}', member.displayName)
             .replace('{ammountmember}', member.guild.memberCount)
         )
     channel.send({ embeds: [embed] })
@@ -94,6 +96,8 @@ client.on('guildMemberRemove', async (member) => {
     const embed = embedcreator('messages.goodbye')
         .setDescription(config.messages.goodbye.description
             .replace('{userping}', member.toString())
+            .replace('{username}', member.user.username)
+            .replace('{displayname}', member.displayName)
             .replace('{ammountmember}', member.guild.memberCount)
         )
     channel.send({ embeds: [embed] })
@@ -109,6 +113,8 @@ client.on('guildMemberUpdate', async (oldmember, newmember) => {
     const embed = embedcreator('messages.boost')
         .setDescription(config.messages.boost.description
             .replace('{userping}', newmember.toString())
+            .replace('{username}', member.user.username)
+            .replace('{displayname}', member.displayName)
             .replace('{ammountboosts}', newmember.guild.premiumSubscriptionCount)
         )
     channel.send({ embeds: [embed] })
