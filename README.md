@@ -1,7 +1,7 @@
 # Message System
 ## Installation
 1. Fork or download this repository
-2. Install node.js if not already installed, you can use this script to install it [Windows](https://github.com/d0dge-dev/nodejs-installer) & [Linux](https://github.com/d0dge-dev/nodejs-installer)
+2. Install node.js if not already installed, you can use this script to install it [Windows](https://github.com/d0dge-dev/node-installer) & [Linux](https://github.com/d0dge-dev/node-installer)
 3. Open the terminal in the folder where the bot is located and run `npm i`
 4. Edit the config how you want it
 5. Get your Bot token from [Discord Developer Portal](https://discord.com/developers/applications)
