@@ -26,7 +26,7 @@ config.messages = {
         description: "Hello {userping}, glad to see you here!\n\nMember No. {ammountmember}", // Description of Embed
         color: "#2d1f54", // Color of Embed
         image: "https://media.discordapp.net/attachments/1061453021902544978/1140418112940945418/cdbz2.png", // Image of Embed
-        // banner: "https://media.discordapp.net/attachments/1061453021902544978/1140418112940945418/cdbz2.png", // Banner of Embed
+        banner: "https://cdn.discordapp.com/attachments/1148993838678032384/1148993947700580442/welcome.png", // Banner of Embed
         author: {
             name: "CODEDBOTZ", // Name of Author
             iconURL: "https://media.discordapp.net/attachments/1061453021902544978/1140418112940945418/cdbz2.png", // Icon of Author
@@ -56,7 +56,7 @@ config.messages = {
         description: "Goodbye {userping}, we hope you enjoyed your stay!\n\nMembers left: {ammountmember}", // Description of Embed
         color: "#2d1f54", // Color of Embed
         image: "https://media.discordapp.net/attachments/1061453021902544978/1140418112940945418/cdbz2.png", // Image of Embed
-        // banner: "https://media.discordapp.net/attachments/1061453021902544978/1140418112940945418/cdbz2.png", // Banner of Embed
+        banner: "https://cdn.discordapp.com/attachments/1148993838678032384/1152588692079251506/goodbye.png", // Banner of Embed
         author: {
             name: "CODEDBOTZ", // Name of Author
             iconURL: "https://media.discordapp.net/attachments/1061453021902544978/1140418112940945418/cdbz2.png", // Icon of Author
@@ -90,7 +90,7 @@ config.messages = {
         description: "Thank you {userping} for boosting our server!\n\nServer Boosts: {ammountboosts}", // Description of Embed
         color: "#2d1f54", // Color of Embed
         image: "https://media.discordapp.net/attachments/1061453021902544978/1140418112940945418/cdbz2.png", // Image of Embed
-        // banner: "https://media.discordapp.net/attachments/1061453021902544978/1140418112940945418/cdbz2.png", // Banner of Embed
+        banner: "https://cdn.discordapp.com/attachments/1148993838678032384/1152588692687437844/boost.png", // Banner of Embed
         author: {
             name: "CODEDBOTZ", // Name of Author
             iconURL: "https://media.discordapp.net/attachments/1061453021902544978/1140418112940945418/cdbz2.png", // Icon of Author

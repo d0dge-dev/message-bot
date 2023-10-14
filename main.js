@@ -110,8 +110,8 @@ client.on('guildMemberUpdate', async (oldmember, newmember) => {
     const embed = embedcreator('messages.boost')
         .setDescription(config.messages.boost.description
             .replace('{userping}', newmember.toString())
-            .replace('{username}', member.user.username)
-            .replace('{displayname}', member.displayName)
+            .replace('{username}', newmember.user.username)
+            .replace('{displayname}', newmember.displayName)
             .replace('{ammountboosts}', newmember.guild.premiumSubscriptionCount)
         )
     channel.send({ embeds: [embed] })
