@@ -85,6 +85,12 @@ client.on('guildMemberAdd', async (member) => {
     if (config.messages.welcome.dm) try { member.send({ embeds: [embed] }) } catch (error) {}
 
     channel.send({ embeds: [embed] })
+
+    config.messages.welcome.roles.forEach(role => {
+        const dcrole = member.guild.roles.cache.get(role)
+        if (!dcrole) return
+        member.roles.add(dcrole)
+    })
 })
 
 client.on('guildMemberRemove', async (member) => {
