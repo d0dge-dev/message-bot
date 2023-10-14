@@ -71,7 +71,6 @@ client.on('ready', () => {
 })
 
 client.on('guildMemberAdd', async (member) => {
-    console.log("welcome")
     const channel = member.guild.channels.cache.get(config.messages.welcome.channel)
     if (!channel) return
 
@@ -82,11 +81,13 @@ client.on('guildMemberAdd', async (member) => {
             .replace('{displayname}', member.displayName)
             .replace('{ammountmember}', member.guild.memberCount)
         )
+
+    if (config.messages.welcome.dm) try { member.send({ embeds: [embed] }) } catch (error) {}
+
     channel.send({ embeds: [embed] })
 })
 
 client.on('guildMemberRemove', async (member) => {
-    console.log("godbye")
     const channel = member.guild.channels.cache.get(config.messages.goodbye.channel)
     if (!channel) return
 
@@ -101,7 +102,6 @@ client.on('guildMemberRemove', async (member) => {
 })
 
 client.on('guildMemberUpdate', async (oldmember, newmember) => {
-    console.log("boost")
     if (newmember.premiumSinceTimestamp === null) return
     if (oldmember.premiumSinceTimestamp === newmember.premiumSinceTimestamp) return
     const channel = newmember.guild.channels.cache.get(config.messages.boost.channel)
@@ -114,18 +114,12 @@ client.on('guildMemberUpdate', async (oldmember, newmember) => {
             .replace('{displayname}', newmember.displayName)
             .replace('{ammountboosts}', newmember.guild.premiumSubscriptionCount)
         )
-    channel.send({ embeds: [embed] })
-})
-
-client.on('messageCreate', async (message) => {
-    if (!message.author.bot) return
-    if (message.author.id !== client.user.id) return
-
-    if (message.channel.id != config.messages.boost.channel) return
-
-    if (!config.messages.boost.reaction.enabled) return
-
-    message.react(config.messages.boost.reaction.emoji)
+        
+    if (config.messages.boost.dm) try { newmember.send({ embeds: [embed] }) } catch (error) {}
+        
+    const msg = await channel.send({ embeds: [embed] })
+    
+    if (config.messages.boost.reaction.enabled) msg.react(config.messages.boost.reaction.emoji)
 })
 
 client.login(config.bot.token)

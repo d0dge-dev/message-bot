@@ -22,6 +22,7 @@ config.bot = {
 config.messages = {
     welcome: {
         channel: "1140405329578971238", // Channel ID
+        dm: false,
         title: "Welcome", // Title of Embed
         description: "Hello {userping}, glad to see you here!\n\nMember No. {ammountmember}", // Description of Embed
         color: "#2d1f54", // Color of Embed
@@ -82,6 +83,7 @@ config.messages = {
     },
     boost: {
         channel: "1140405448260989068", // Channel ID
+        dm: false,
         reaction: {
             enabled: true, // If true the bot will react to the message
             emoji: "💜", // Emoji of Reaction
